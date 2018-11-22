@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WifiSpots</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="./script.js" type="text/javascript"></script>
+</head>
+<body>
+<header id="statusbar">
+	<span>10:30</span>
+	<img src="./assets/2x/baseline_network_wifi_white_18dp.png">
+	<img src="./assets/2x/baseline_network_cell_white_18dp.png">
+	<img src="./assets/2x/baseline_battery_full_white_18dp.png">
+</header>
+<nav id="toolbar">
+	<span>WifiSpots</span>
+	<img src="./assets/2x/baseline_search_white_18dp.png" onclick="search()">
+</nav>
+<section id="application">
+	<article class="tab" id="new-location">
+		<p>Clique no ícone de busca da barra para encontrar um ponto.</p>
+	</article>
+	<article class="tab" id="list-locations">
+		<div class="list-item" onclick="remove()">
+			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
+			<p class="key">Latitude:</p>
+			<p class="value">-84.14680681</p>
+			<p class="key">Longitude:</p>
+			<p class="value">-13.1864186</p>
+		</div>
+		<div class="separator"></div>
+		<div class="list-item" onclick="remove()">
+			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
+			<p class="key">Latitude:</p>
+			<p class="value">-84.14680681</p>
+			<p class="key">Longitude:</p>
+			<p class="value">-13.1864186</p>
+		</div>
+		<div class="separator"></div>
+		<div class="list-item" onclick="remove()">
+			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
+			<p class="key">Latitude:</p>
+			<p class="value">-84.14680681</p>
+			<p class="key">Longitude:</p>
+			<p class="value">-13.1864186</p>
+		</div>
+		<div class="separator"></div>
+		<div class="list-item" onclick="remove()">
+			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
+			<p class="key">Latitude:</p>
+			<p class="value">-84.14680681</p>
+			<p class="key">Longitude:</p>
+			<p class="value">-13.1864186</p>
+		</div>
+		<div class="separator"></div>
+		<div class="list-item" onclick="remove()">
+			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
+			<p class="key">Latitude:</p>
+			<p class="value">-84.14680681</p>
+			<p class="key">Longitude:</p>
+			<p class="value">-13.1864186</p>
+		</div>
+		<div class="separator"></div>
+	</article>
+</section>
+<footer id="navigation">
+	<div class="bottom-navigation" id="navigation-new" onclick="display('new-location')">
+		<img src="./assets/2x/baseline_add_location_black_18dp.png">
+		<p>Adicionar</p>
+	</div>
+	<div class="bottom-navigation" id="navigation-list" onclick="display('list-locations')">
+		<img src="./assets/2x/baseline_location_on_black_18dp.png">
+		<p>Meus Pontos</p>
+	</div>
+</footer>

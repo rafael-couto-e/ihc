@@ -1,0 +1,157 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	max-width: 100%;
+  	overflow-x: hidden;
+}
+
+#statusbar, #toolbar, #navigation {
+	position: fixed;
+	width: 100%;
+}
+
+#statusbar {
+	background-color: #303F9F;
+	height: 30px;
+	top: 0;
+}
+
+#statusbar span {
+	margin-right: 20px;
+	float: right;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	margin-top: 5px;
+}
+
+#statusbar img {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-right: 10px;
+	float: right;
+}
+
+#toolbar {
+	background-color: #3F51B5;
+	height: 60px;
+	top: 30px;
+}
+
+#toolbar span {
+	float: left;
+	margin-left: 20px;
+	color: white;
+	font-size: 1.5em;
+	margin-top: 12px;
+}
+
+#toolbar img {
+	float: right;
+	margin-right: 20px;
+	margin-top: 12px;
+}
+
+#toolbar img:hover {
+	cursor: pointer;
+}
+
+.bottom-navigation {
+	width: 50%;
+}
+
+.bottom-navigation:hover {
+	cursor: pointer;
+}
+
+.bottom-navigation img {
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.bottom-navigation p {
+	text-align: center;
+}
+
+#navigation {
+	bottom: 0;
+	background-color: #dedede;
+}
+
+#navigation-new {
+	float: left;
+	background-color: white;
+	color: navy;
+}
+
+#navigation-new p {
+	font-size: 1.2em;
+}
+
+#navigation-list {
+	float: right;
+}
+
+#application {
+	height: 100%;
+}
+
+#application article {
+	width: 100%;
+	height: 100%;
+	padding: 106px 16px 118px 16px;
+}
+
+#new-location {
+	display: block;
+}
+
+#list-locations {
+	display: none;
+}
+
+article p {
+	margin-top: 0;
+	margin-left: 0;
+	color: black;
+}
+
+#new-location p {
+	font-size: 2em;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.address {
+	font-weight: bold;
+	margin-bottom: 32px;
+	font-size: 1.2em;
+}
+
+.key {
+	font-weight: bold;
+	display: inline-block;
+	width: 85px
+}
+
+.value {
+	display: inline-block;
+	float: right;
+	width: calc(100% - 85px)
+}
+
+.separator {
+	height: 2px;
+	background-color: #dedede;
+	margin-bottom: 16px;
+}
+
+.list-item:hover {
+	cursor: pointer;
+}
