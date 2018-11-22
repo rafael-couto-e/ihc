@@ -34,9 +34,22 @@ function display(id) {
 }
 
 function search() {
+	let search = document.getElementById('search')
 
+	search.style.display = 'block'
 }
 
 function remove() {
-	
+	let elements = document.getElementById('list-locations')
+
+	var firstDiv;
+
+	for (var i = 0; i < elements.childNodes.length; i++) {
+		let value = elements.childNodes[i]
+
+		if (value.className === 'list-item') {
+			elements.removeChild(value)
+			break;
+		}
+	}
 }
