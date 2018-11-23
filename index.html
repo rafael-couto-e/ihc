@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
 	<title>WifiSpots</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<script src="./script.js" type="text/javascript"></script>
+	<script src="./script.js"></script>
 </head>
 <body>
 <header id="statusbar">
 	<span>10:30</span>
-	<img src="./assets/2x/baseline_network_wifi_white_18dp.png">
-	<img src="./assets/2x/baseline_network_cell_white_18dp.png">
-	<img src="./assets/2x/baseline_battery_full_white_18dp.png">
+	<img src="./assets/2x/baseline_network_wifi_white_18dp.png" alt="Ícone Wifi">
+	<img src="./assets/2x/baseline_network_cell_white_18dp.png" alt="Ícone Rede Móvel">
+	<img src="./assets/2x/baseline_battery_full_white_18dp.png" alt="Ícone Bateria">
 </header>
 <nav id="toolbar">
 	<span>WifiSpots</span>
-	<img src="./assets/2x/baseline_search_white_18dp.png" onclick="search()">
+	<img src="./assets/2x/baseline_search_white_18dp.png" onclick="search()" alt="Ícone Busca">
 </nav>
 <section id="application">
+	<h6>App</h6>
 	<article class="tab" id="new-location">
-		<p>Clique no ícone de busca da barra para encontrar um ponto.</p>
+		<h6>Novo</h6>
+		<p id="instructions">Clique no ícone de busca da barra para encontrar um ponto.</p>
+		<div id="confirm">
+			<p>Rua Dra. Maria Zélia...</p>
+			<input type="button" name="confirm" value="Confirmar" onclick="confirm()">
+		</div>
 	</article>
 	<article class="tab" id="list-locations">
+		<h6>Lista</h6>
 		<div class="list-item" onclick="remove()">
 			<p class="address">Rua X, nº 12 - Bairro, Cidade, Estado, CEP - Brasil</p>
 			<p class="key">Latitude:</p>
@@ -73,16 +80,42 @@
 		</div>
 	</article>
 	<article id="search">
-		
+		<h6>Busca</h6>
+		<div id="searchbar">
+			<form>
+				<input type="text" name="address" placeholder="Encontre um ponto de wifi">
+			</form>
+		</div>
+		<img src="./assets/map-no-params.png" alt="Mapa">
+		<div class="address-item" onclick="select()">
+			<p class="name">IFRS</p>
+			<p class="address-search">Rua Dra. Maria Zélia...</p>
+		</div>
+		<div class="address-item" onclick="select()">
+			<p class="name">IFRS</p>
+			<p class="address-search">Rua Dra. Maria Zélia...</p>
+		</div>
+		<div class="address-item" onclick="select()">
+			<p class="name">IFRS</p>
+			<p class="address-search">Rua Dra. Maria Zélia...</p>
+		</div>
+		<div class="address-item" onclick="select()">
+			<p class="name">IFRS</p>
+			<p class="address-search">Rua Dra. Maria Zélia...</p>
+		</div>
+	</article>
+	<article id="toast">
+		<h6>Toast</h6>
+		<p>Ponto adicionado!</p>
 	</article>
 </section>
 <footer id="navigation">
 	<div class="bottom-navigation" id="navigation-new" onclick="display('new-location')">
-		<img src="./assets/2x/baseline_add_location_black_18dp.png">
+		<img src="./assets/2x/baseline_add_location_black_18dp.png" alt="Ícone Adicionar Ponto">
 		<p>Adicionar</p>
 	</div>
 	<div class="bottom-navigation" id="navigation-list" onclick="display('list-locations')">
-		<img src="./assets/2x/baseline_location_on_black_18dp.png">
+		<img src="./assets/2x/baseline_location_on_black_18dp.png" alt="Ícone Meus Pontos">
 		<p>Meus Pontos</p>
 	</div>
 </footer>

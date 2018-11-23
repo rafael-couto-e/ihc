@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	max-width: 100%;
   	overflow-x: hidden;
+  	z-index: 100;
 }
 
 #statusbar, #toolbar, #navigation {
@@ -98,7 +99,7 @@ body {
 	height: 100%;
 }
 
-#application article {
+.tab {
 	width: 100%;
 	height: 100%;
 	padding: 106px 16px 118px 16px;
@@ -118,13 +119,12 @@ article p {
 	color: black;
 }
 
-#new-location p {
+#instructions {
 	font-size: 2em;
 	text-align: center;
 	position: absolute;
 	top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -158,10 +158,90 @@ article p {
 
 #search {
 	position: absolute;
-	display: none;
-	background-color: rgba(0, 0, 0, 50%)
+	visibility: hidden;
+	background-color: rgba(0, 0, 0, 0.5);
 	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 101;
+	padding: 16px;
+}
+
+#searchbar {
+	height: 60px;
+}
+
+#searchbar input {
+	width: calc(100% - 52px);
+	height: 54px;
+	padding-left: 16px;
+	font-size: 1.6em;
+}
+
+#search img {
+	width: calc(100% - 32px);
+	margin: 16px auto 12px auto;
+}
+
+.address-item {
+	background-color: white;
+	width: calc(100% - 48px);
+	height: 60px;
+	padding: 8px;
+	margin-bottom: 16px;
+}
+
+.address-item p {
+	margin: 0 0 20px 0;
+}
+
+.address-item:hover {
+	cursor: pointer;
+}
+
+#confirm {
+	visibility: hidden;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#confirm p {
+	font-size: 2em;
+}
+
+#confirm input {
+	background-color: #d0d0d0;
+	height: 40px;
+	font-size: 1.2em;
+}
+
+#confirm input:hover {
+	cursor: pointer;
+}
+
+#toast {
+	visibility: hidden;
+}
+
+#toast p {
+	display: inline;
+	text-align: center;
+	position: absolute;
+	bottom: 10%;
+    left: 50%;
+    padding: 16px 12px;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    background-color: #c0c0c0;
+}
+
+h6 {
+	height: 0%;
+	width: 0%;
+	margin: 0;
+	color: white;
 }

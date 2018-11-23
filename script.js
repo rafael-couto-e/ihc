@@ -36,7 +36,7 @@ function display(id) {
 function search() {
 	let search = document.getElementById('search')
 
-	search.style.display = 'block'
+	search.style.visibility = 'visible'
 }
 
 function remove() {
@@ -52,4 +52,34 @@ function remove() {
 			break;
 		}
 	}
+}
+
+function select() {
+	let search = document.getElementById('search')
+	let instructions = document.getElementById('instructions')
+	let confirm = document.getElementById('confirm')
+
+	search.style.visibility = 'hidden'
+	instructions.style.visibility = 'hidden'
+	confirm.style.visibility = 'visible'
+}
+
+function confirm() {
+	let instructions = document.getElementById('instructions')
+	let confirm = document.getElementById('confirm')
+
+	instructions.style.visibility = 'visible'
+	confirm.style.visibility = 'hidden'
+
+	showToast()
+}
+
+function showToast() {
+	let toast = document.getElementById('toast')
+
+	toast.style.visibility = 'visible'
+
+	setTimeout(function() {
+		toast.style.visibility = 'hidden'
+	}, 2000)
 }
